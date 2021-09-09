@@ -1,0 +1,8 @@
+<% flash.each do |message_type, message_content| %>
+  <div class="ui message transition <%= (message_type == 'success') ? 'success' : 'error' %>">
+    <i class="close icon" style="user-select: auto;"></i>
+    <div class="header" style="user-select: auto;">
+      <%= message_content %>
+    </div>
+  </div>
+<% end %>

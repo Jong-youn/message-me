@@ -6,44 +6,34 @@
 <div class="ui two column grid">
   <div class="twelve wide column">
     <div class="ui fluid raised card chatbox">
-      <div class="content" style="user-select: auto;">
+      <div class="content">
         <div class="ui feed">
-          <div class="event" style="user-select: auto;">
-            <div class="content" style="user-select: auto;">
-              <div class="summary" style="user-select: auto;">
-                <a style="user-select: auto;">Elliot Fu</a> added <a style="user-select: auto;">Jenny Hess</a> as a friend
+
+          <div class="event">
+            <div class="content">
+              <div class="summary">
+                <a>Elliot Fu</a> added <a>Jenny Hess</a> as a friend
               </div>
             </div>
           </div>
-          <div class="event" style="user-select: auto;">
-            <div class="content" style="user-select: auto;">
-              <div class="summary" style="user-select: auto;">
-                <a style="user-select: auto;">Stevie Feliciano</a> added <a style="user-select: auto;">Elliot Fu</a> as a friend
+          <%= @messages.each do |message| %>
+            <div class="event">
+              <div class="content">
+                <div class="summary">
+                  <em><%= message.user.username %></em>: <%= message.body %>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="event" style="user-select: auto;">
-            <div class="content" style="user-select: auto;">
-              <div class="summary" style="user-select: auto;">
-                <a style="user-select: auto;">Helen Troy</a> added <a style="user-select: auto;">Christian Rocha</a> as a friend
-              </div>
-            </div>
-          </div>
-          <div class="event" style="user-select: auto;">
-            <div class="content" style="user-select: auto;">
-              <div class="summary" style="user-select: auto;">
-                <em>Christian Rocha</em>: Test message
-              </div>
-            </div>
-          </div>
+          <% end %>
+          
         </div>
       </div>
       <div class="extra">
-        <form class="ui reply form" style="user-select: auto;">
-          <div class="field" style="user-select: auto;">
-            <div class="ui fluid icon input" style="user-select: auto;">
-              <input type="text" placeholder="Search..." style="user-select: auto;">
-              <i class="bordered inverted orange edit icon" style="user-select: auto;"></i>
+        <form class="ui reply form">
+          <div class="field">
+            <div class="ui fluid icon input">
+              <input type="text" placeholder="Search...">
+              <i class="bordered inverted orange edit icon"></i>
             </div>
           </div>
         </form>
@@ -53,15 +43,15 @@
   
   <div class="four wide column">
     <div class="ui fluid raised card chatbox">
-      <div class="content" style="user-select: auto;">
+      <div class="content">
         <div class="ui inverted vertical menu">
-          <a class="active item" style="user-select: auto;">
+          <a class="active item">
             Home
           </a>
-          <a class="item" style="user-select: auto;">
+          <a class="item">
             Messages
           </a>
-          <a class="item" style="user-select: auto;">
+          <a class="item">
             Friends
           </a>
         </div>
